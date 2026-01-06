@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>البش مهندس صخر محمد العذري | سيرة ذاتية تفاعلية مذهلة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --primary: #0F172A;
+            --secondary: #1E293B;
+            --accent: #3B82F6;
+            --accent-gradient: linear-gradient(135deg, #3B82F6, #8B5CF6);
+            --gold: #F59E0B;
+            --neon-blue: #00D4FF;
+            --neon-pink: #FF00FF;
+            --light: #F8FAFC;
+            --dark: #0F172A;
+            --success: #10B981;
+            --warning: #F59E0B;
+            --danger: #EF4444;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --glass: rgba(255, 255, 255, 0.1);
+            --shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            --transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            --glow: 0 0 30px rgba(59, 130, 246, 0.5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background: var(--primary);
+            color: var(--light);
+            overflow-x: hidden;
+            line-height: 1.8;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(245, 158, 11, 0.05) 0%, transparent 50%);
+            z-index: -1;
+        }
+
+        /* تصميم النجوم المتحركة */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 5s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
+        }
+
+        /* شريط التنقل */
+        .navbar {
+            position: fixed;
+            height: 90px; /* ارتفاع ثابت */
+
+
+            top: 0;
+            right: 0;
+            left: 0;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+            box-shadow: var(--glow);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'El Messiri', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+            letter-spacing: 2px;
+        }
+
+        .logo-sub {
+            font-size: 1rem;
+            color: var(--neon-blue);
+            display: block;
+            margin-top: -5px;
+            letter-spacing: 3px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--light);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--accent-gradient);
+            transition: left 0.5s ease;
+            z-index: -1;
+        }
+
+        .nav-link:hover::before {
+            left: 0;
+        }
+
+        .nav-link:hover {
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: var(--glow);
+        }
+
+        .nav-link.active {
+            background: var(--accent-gradient);
+            color: white;
+            box-shadow: var(--glow);
+        }
+
+        /* القسم الرئيسي */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text {
+            animation: slideInRight 1s ease-out;
+        }
+
+        .title {
+            font-family: 'El Messiri', sans-serif;
+            font-size: 4.5rem;
+            background: linear-gradient(45deg, var(--neon-blue), var(--accent), var(--neon-pink));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+        }
+
+        .subtitle {
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .highlight {
+            color: var(--neon-blue);
+            font-weight: 700;
+        }
+
+        /* تصميم الصورة الشخصية */
+        .profile-section {
+            position: relative;
+            animation: slideInLeft 1s ease-out;
+        }
+
+        .profile-container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+        }
+
+        .profile-frame {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: var(--accent-gradient);
+            padding: 10px;
+            position: relative;
+            animation: rotate 20s linear infinite;
+        }
+
+        .profile-frame::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(45deg, var(--neon-blue), var(--neon-pink), var(--gold));
+            border-radius: 50%;
+            z-index: -1;
+            animation: rotate 10s linear infinite reverse;
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            background: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .profile-placeholder {
+            font-size: 6rem;
+            color: var(--accent);
+        }
+
+        .upload-btn {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: var(--accent-gradient);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+            box-shadow: var(--glow);
+            z-index: 10;
+        }
+
+        .upload-btn:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 0 40px rgba(59, 130, 246, 0.8);
+        }
+
+        /* تصميم البطاقات */
+        .section {
+            padding: 6rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'El Messiri', sans-serif;
+            font-size: 3.5rem;
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--accent-gradient);
+            border-radius: 2px;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .card {
+            background: linear-gradient(145deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.8));
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--accent-gradient);
+        }
+
+        .card:hover {
+            transform: translateY(-20px) rotateX(5deg);
+            box-shadow: var(--glow);
+            border-color: var(--accent);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--neon-blue);
+        }
+
+        /* تصميم المهارات */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .skill-category {
+            background: rgba(30, 41, 59, 0.5);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: var(--transition);
+        }
+
+        .skill-category:hover {
+            border-color: var(--accent);
+            transform: translateY(-10px);
+            box-shadow: var(--glow);
+        }
+
+        .skill-category h3 {
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .skill-tag {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--neon-blue);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-tag::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .skill-tag:hover::before {
+            left: 100%;
+        }
+
+        .skill-tag:hover {
+            background: rgba(59, 130, 246, 0.2);
+            border-color: var(--accent);
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+        }
+
+        /* تقدم المهارات */
+        .skill-progress {
+            margin-top: 1.5rem;
+        }
+
+        .skill-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-name {
+            font-weight: 600;
+            color: var(--light);
+        }
+
+        .skill-percent {
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--accent-gradient);
+            width: 0;
+            border-radius: 5px;
+            transition: width 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        /* الخبرات */
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 4rem auto 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 50%;
+            transform: translateX(50%);
+            width: 4px;
+            height: 100%;
+            background: var(--accent-gradient);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 4rem;
+            width: calc(50% - 2rem);
+        }
+
+        .timeline-item:nth-child(odd) {
+            right: calc(50% + 2rem);
+        }
+
+        .timeline-item:nth-child(even) {
+            left: calc(50% + 2rem);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 50%;
+            box-shadow: 0 0 20px var(--accent);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-dot {
+            right: -2.8rem;
+        }
+
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: -2.8rem;
+        }
+
+        .timeline-content {
+            background: rgba(30, 41, 59, 0.8);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            transition: var(--transition);
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+            box-shadow: var(--glow);
+        }
+
+        .timeline-year {
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* التواصل */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-card {
+            background: rgba(30, 41, 59, 0.8);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            transition: var(--transition);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-15px) scale(1.05);
+            border-color: var(--accent);
+            box-shadow: var(--glow);
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .contact-info h3 {
+            color: var(--neon-blue);
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(30, 41, 59, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--light);
+            font-size: 1.5rem;
+            text-decoration: none;
+            border: 2px solid rgba(59, 130, 246, 0.3);
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            transform: translateY(-10px) rotate(15deg);
+            border-color: var(--accent);
+            background: var(--accent);
+            color: white;
+            box-shadow: var(--glow);
+        }
+
+        /* الفوتر */
+        footer {
+            background: rgba(15, 23, 42, 0.95);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(59, 130, 246, 0.3);
+            margin-top: 4rem;
+        }
+
+        .footer-title {
+            font-family: 'El Messiri', sans-serif;
+            font-size: 2.5rem;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        /* الحركات */
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        /* التجاوب */
+        @media (max-width: 1200px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 4rem;
+            }
+
+            .title {
+                font-size: 3.5rem;
+            }
+
+            .profile-container {
+                width: 350px;
+                height: 350px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .title {
+                font-size: 2.8rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .timeline::before {
+                right: 2rem;
+            }
+
+            .timeline-item {
+                width: calc(100% - 4rem);
+                right: 2rem !important;
+                left: auto !important;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-dot,
+            .timeline-item:nth-child(even) .timeline-dot {
+                right: -3.2rem;
+                left: auto;
+            }
+
+            .profile-container {
+                width: 300px;
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .title {
+                font-size: 2.2rem;
+            }
+
+            .profile-container {
+                width: 250px;
+                height: 250px;
+            }
+
+            .card, .skill-category {
+                padding: 1.5rem;
+            }
+        }
+
+        /* تأثيرات التمرير */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .scroll-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- النجوم المتحركة -->
+    <div class="stars" id="starsContainer"></div>
+
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                البش مهندس صخر العذري
+                <span class="logo-sub">مهندس تقنية المعلومات</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">الرئيسية</a></li>
+                <li><a href="#about" class="nav-link">عني</a></li>
+                <li><a href="#skills" class="nav-link">المهارات</a></li>
+                <li><a href="#experience" class="nav-link">الخبرات</a></li>
+                <li><a href="#contact" class="nav-link">التواصل</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- القسم الرئيسي -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="title">البش مهندس<br>صخر محمد العذري</h1>
+                <h2 class="subtitle">مهندس تقنية معلومات متخصص</h2>
+                <p class="description">
+                    مواليد <span class="highlight">2003/10/8</span> · من <span class="highlight">اليمن/صنعاء/نهم</span><br>
+                    طالب في <span class="highlight">جامعة العلوم والتكنولوجيا</span><br>
+                    متخصص في <span class="highlight">البرمجة، الذكاء الاصطناعي، وعلم البيانات</span>
+                </p>
+                <div style="margin-top: 3rem;">
+                    <button class="upload-btn" id="uploadBtn">
+                        <i class="fas fa-camera"></i> تعديل الصورة الشخصية
+                    </button>
+                    <input type="file" id="imageInput" accept="image/*" style="display: none;">
+                </div>
+            </div>
+            <div class="profile-section">
+                <div class="profile-container">
+                    <div class="profile-frame">
+                        <div class="profile-image" id="profileImage">
+                            <i class="fas fa-user-circle profile-placeholder"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- القسم الشخصي -->
+    <section id="about" class="section">
+        <h2 class="section-title scroll-animate">معلومات شخصية</h2>
+        <div class="cards-grid">
+            <div class="card scroll-animate">
+                <i class="fas fa-user-graduate card-icon"></i>
+                <h3 class="card-title">البيانات الشخصية</h3>
+                <div class="card-content">
+                    <p><strong>الاسم الكامل:</strong> صخر محمد العذري</p>
+                    <p><strong>اللقب:</strong> البش مهندس</p>
+                    <p><strong>تاريخ الميلاد:</strong> 8 أكتوبر 2003</p>
+                    <p><strong>مكان الميلاد:</strong> اليمن - صنعاء - مديرية نهم</p>
+                    <p><strong>العنوان:</strong> عزلة عيال منصور - بيت العذري</p>
+                    <p><strong>الجنسية:</strong> يمني</p>
+                </div>
+            </div>
+
+            <div class="card scroll-animate">
+                <i class="fas fa-university card-icon"></i>
+                <h3 class="card-title">المسيرة التعليمية</h3>
+                <div class="card-content">
+                    <p><strong>الشهادة الجامعية:</strong> جاري الدراسة</p>
+                    <p><strong>التخصص:</strong> تقنية المعلومات (IT)</p>
+                    <p><strong>الجامعة:</strong> جامعة العلوم والتكنولوجيا</p>
+                    <p><strong>الشهادة الثانوية:</strong> حاصل عليها بنجاح</p>
+                    <p><strong>التقدير:</strong> امتياز مع مرتبة الشرف</p>
+                    <p><strong>الحالة الدراسية:</strong> طالب في السنة الثالثة</p>
+                </div>
+            </div>
+
+            <div class="card scroll-animate">
+                <i class="fas fa-bullseye card-icon"></i>
+                <h3 class="card-title">الرؤية المستقبلية</h3>
+                <div class="card-content">
+                    <p>أسعى لأن أصبح رائداً في مجال تقنية المعلومات والذكاء الاصطناعي في اليمن والوطن العربي.</p>
+                    <p>أطمح لتطوير حلول تقنية مبتكرة تساهم في حل المشكلات المجتمعية.</p>
+                    <p>هدفي إنشاء شركة ناشئة متخصصة في تطبيقات الذكاء الاصطناعي.</p>
+                    <p>أسعى للحصول على شهادات دولية في الأمن السيبراني وعلم البيانات.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- المهارات التقنية -->
+    <section id="skills" class="section" style="background: rgba(15, 23, 42, 0.7);">
+        <h2 class="section-title scroll-animate">المهارات التقنية المتقدمة</h2>
+        
+        <div class="skills-container">
+            <!-- لغات البرمجة -->
+            <div class="skill-category scroll-animate">
+                <h3><i class="fas fa-code"></i> لغات البرمجة</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">PHP</span>
+                    <span class="skill-tag">Dart</span>
+                    <span class="skill-tag">Kotlin</span>
+                    <span class="skill-tag">Swift</span>
+                </div>
+                <div class="skill-progress">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Python (متقدم)</span>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-width="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-width="90"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الذكاء الاصطناعي -->
+            <div class="skill-category scroll-animate">
+                <h3><i class="fas fa-brain"></i> الذكاء الاصطناعي</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Machine Learning</span>
+                    <span class="skill-tag">Deep Learning</span>
+                    <span class="skill-tag">Neural Networks</span>
+                    <span class="skill-tag">Computer Vision</span>
+                    <span class="skill-tag">NLP</span>
+                    <span class="skill-tag">TensorFlow</span>
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">OpenCV</span>
+                </div>
+                <div class="skill-progress">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">تعلم الآلة</span>
+                            <span class="skill-percent">88%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-width="88"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">معالجة اللغة</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-width="85"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- علم البيانات -->
+            <div class="skill-category scroll-animate">
+                <h3><i class="fas fa-chart-line"></i> علم البيانات</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Data Analysis</span>
+                    <span class="skill-tag">Data Mining</span>
+                    <span class="skill-tag">Big Data</span>
+                    <span class="skill-tag">Data Visualization</span>
+                    <span class="skill-tag">Pandas</span>
+                    <span class="skill-tag">NumPy</span>
+                    <span class="skill-tag">SciPy</span>
+                    <span class="skill-tag">Tableau</span>
+                </div>
+                <div class="skill-progress">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">تحليل البيانات</span>
+                            <span class="skill-percent">92%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-width="92"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">تصور البيانات</span>
+                            <span class="skill-percent">87%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-width="87"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- قواعد البيانات -->
+            <div class="skill-category scroll-animate">
+                <h3><i class="fas fa-database"></i> قواعد البيانات</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">SQLite</span>
+                    <span class="skill-tag">Firebase</span>
+                    <span class="skill-tag">Redis</span>
+                    <span class="skill-tag">Oracle</span>
+                    <span class="skill-tag">Cassandra</span>
+                </div>
+                <div class="skill-progress">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">قواعد SQL</span>
+                            <span class="skill-percent">94%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-width="94"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">NoSQL</span>
+                            <span class="skill-percent">82%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-width="82"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- تقنية المعلومات IT -->
+            <div class="skill-category scroll-animate">
+                <h3><i class="fas fa-network-wired"></i> تقنية المعلومات IT</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Networking</span>
+                    <span class="skill-tag">Cybersecurity</span>
+                    <span class="skill-tag">Cloud Computing</span>
+                    <span class="skill-tag">DevOps</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">Kubernetes</span>
+                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">Azure</span>
+                </div>
+                <div class="skill-progress">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">الشبكات</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">الحوسبة السحابية</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-width="80"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- تطوير الويب -->
+            <div class="skill-category scroll-animate">
+                <h3><i class="fas fa-globe"></i> تطوير الويب</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Vue.js</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Express</span>
+                    <span class="skill-tag">Django</span>
+                    <span class="skill-tag">Flask</span>
+                </div>
+                <div class="skill-progress">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">تطوير الواجهات</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">تطوير الخلفية</span>
+                            <span class="skill-percent">88%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-width="88"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الخبرات والمشاريع -->
+    <section id="experience" class="section">
+        <h2 class="section-title scroll-animate">الخبرات والمشاريع</h2>
+        
+        <div class="timeline">
+            <div class="timeline-item scroll-animate">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-year">2024 - الآن</div>
+                    <h3>مطور ذكاء اصطناعي متقدم</h3>
+                    <p>تطوير أنظمة ذكاء اصطناعي للتنبؤ والتصنيف باستخدام خوارزميات التعلم العميق.</p>
+                    <p>بناء نماذج معالجة اللغة العربية الطبيعية.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">NLP</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item scroll-animate">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-year">2023 - 2024</div>
+                    <h3>محلل بيانات احترافي</h3>
+                    <p>تحليل مجموعات البيانات الضخمة واستخراج الرؤى القيمة.</p>
+                    <p>تصميم لوحات تحكم تفاعلية لتتبع المؤشرات الرئيسية.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">SQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item scroll-animate">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-year">2022 - 2023</div>
+                    <h3>مبرمج تطبيقات الويب</h3>
+                    <p>تطوير تطبيقات ويب كاملة باستخدام أحدث التقنيات.</p>
+                    <p>تصميم واجهات مستخدم تفاعلية وجذابة.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">MongoDB</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item scroll-animate">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-year">2021 - 2022</div>
+                    <h3>متخصص قواعد البيانات</h3>
+                    <p>تصميم وتنفيذ قواعد البيانات المعقدة.</p>
+                    <p>تحسين أداء الاستعلامات وإنشاء التقارير.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Redis</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- المشاريع الحديثة -->
+        <div style="margin-top: 6rem;">
+            <h3 class="section-title" style="font-size: 2.5rem;">المشاريع الحديثة</h3>
+            <div class="cards-grid" style="margin-top: 2rem;">
+                <div class="card scroll-animate">
+                    <i class="fas fa-robot card-icon"></i>
+                    <h3 class="card-title">مساعد ذكي للغة العربية</h3>
+                    <p>نظام ذكاء اصطناعي لفهم وتوليد النصوص العربية باستخدام نماذج لغوية متقدمة.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AI</span>
+                        <span class="skill-tag">NLP</span>
+                        <span class="skill-tag">Python</span>
+                    </div>
+                </div>
+
+                <div class="card scroll-animate">
+                    <i class="fas fa-chart-bar card-icon"></i>
+                    <h3 class="card-title">منصة تحليل البيانات</h3>
+                    <p>منظمة متكاملة لتحليل البيانات الضخمة وتصورها بلوحات تحكم تفاعلية.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Data Science</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">D3.js</span>
+                    </div>
+                </div>
+
+                <div class="card scroll-animate">
+                    <i class="fas fa-shield-alt card-icon"></i>
+                    <h3 class="card-title">نظام أمن سيبراني</h3>
+                    <p>نظام متكامل للكشف عن التهديدات الأمنية وحماية الشبكات.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Cybersecurity</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Networking</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- التواصل -->
+    <section id="contact" class="section" style="background: rgba(15, 23, 42, 0.7);">
+        <h2 class="section-title scroll-animate">تواصل معي</h2>
+        
+        <div class="contact-container">
+            <div class="contact-card scroll-animate">
+                <i class="fas fa-envelope contact-icon"></i>
+                <div class="contact-info">
+                    <h3>البريد الإلكتروني الرسمي</h3>
+                    <p>sakhernihm@gmail.com</p>
+                    <p style="margin-top: 1rem; color: var(--gold); font-weight: 600;">للتواصل المهني والعروض</p>
+                </div>
+            </div>
+
+            <div class="contact-card scroll-animate">
+                <i class="fab fa-facebook contact-icon"></i>
+                <div class="contact-info">
+                    <h3>فيسبوك</h3>
+                    <p>صفحة البش مهندس صخر العذري</p>
+                    <p style="margin-top: 1rem; color: var(--neon-blue);">للتواصل الاجتماعي والمشاريع</p>
+                </div>
+            </div>
+
+            <div class="contact-card scroll-animate">
+                <i class="fab fa-github contact-icon"></i>
+                <div class="contact-info">
+                    <h3>جيت هاب</h3>
+                    <p>مستودع المشاريع البرمجية</p>
+                    <p style="margin-top: 1rem; color: var(--neon-blue);">جميع الأكواد المصدرية</p>
+                </div>
+            </div>
+
+            <div class="contact-card scroll-animate">
+                <i class="fas fa-phone contact-icon"></i>
+                <div class="contact-info">
+                    <h3>التواصل المباشر</h3>
+                    <p>متاح للتعاون والمشاريع</p>
+                    <p style="margin-top: 1rem; color: var(--gold); font-weight: 600;">للاتفاق على المقابلات</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="social-links">
+            <a href="mailto:sakhernihm@gmail.com" class="social-link" title="البريد الإلكتروني">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://github.com" class="social-link" title="جيت هاب">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://facebook.com" class="social-link" title="فيسبوك">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://linkedin.com" class="social-link" titleلينكد إن">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://twitter.com" class="social-link" title="تويتر">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://instagram.com" class="social-link" title="انستجرام">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+
+        <!-- نموذج التواصل السريع -->
+        <div style="max-width: 600px; margin: 4rem auto 0; background: rgba(30, 41, 59, 0.8); padding: 2rem; border-radius: 20px; border: 1px solid rgba(59, 130, 246, 0.3);">
+            <h3 style="text-align: center; color: var(--neon-blue); margin-bottom: 1.5rem;">إرسال رسالة سريعة</h3>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <input type="text" placeholder="اسمك الكريم" style="flex: 1; min-width: 200px; padding: 1rem; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 10px; color: white;">
+                <input type="email" placeholder="بريدك الإلكتروني" style="flex: 1; min-width: 200px; padding: 1rem; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 10px; color: white;">
+                <textarea placeholder="رسالتك..." rows="3" style="width: 100%; padding: 1rem; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 10px; color: white; resize: vertical;"></textarea>
+                <button style="background: var(--accent-gradient); color: white; border: none; padding: 1rem 3rem; border-radius: 50px; font-weight: 600; cursor: pointer; transition: var(--transition); margin: 0 auto; display: block;">
+                    <i class="fas fa-paper-plane"></i> إرسال الرسالة
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <h3 class="footer-title">البش مهندس صخر العذري</h3>
+        <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 1rem;">
+            مهندس تقنية معلومات · متخصص في الذكاء الاصطناعي · محلل بيانات · مطور برمجيات
+        </p>
+        <p style="color: rgba(255, 255, 255, 0.5);">
+            © 2024 جميع الحقوق محفوظة · تم التصميم والتطوير بأحدث التقنيات
+        </p>
+        <div class="social-links" style="margin-top: 2rem;">
+            <a href="mailto:sakhernihm@gmail.com" class="social-link">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://wa.me/967000000000" class="social-link">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://t.me/username" class="social-link">
+                <i class="fab fa-telegram"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- مكتبة Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        // إنشاء النجوم المتحركة
+        function createStars() {
+            const starsContainer = document.getElementById('starsContainer');
+            for (let i = 0; i < 100; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.width = Math.random() * 3 + 1 + 'px';
+                star.style.height = star.style.width;
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 5 + 's';
+                star.style.animationDuration = Math.random() * 3 + 3 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+
+        // تحميل الصورة الشخصية
+        const imageInput = document.getElementById('imageInput');
+        const uploadBtn = document.getElementById('uploadBtn');
+        const profileImage = document.getElementById('profileImage');
+
+        uploadBtn.addEventListener('click', () => {
+            imageInput.click();
+        });
+
+        imageInput.addEventListener('change', function() {
+            if (this.files && this.files[0]) {
+                const reader = new FileReader();
+                
+                reader.onload = function(e) {
+                    profileImage.innerHTML = '';
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.style.width = '100%';
+                    img.style.height = '100%';
+                    img.style.objectFit = 'cover';
+                    img.style.borderRadius = '50%';
+                    profileImage.appendChild(img);
+                    
+                    // حفظ الصورة في التخزين المحلي
+                    localStorage.setItem('profileImage', e.target.result);
+                    
+                    // إظهار رسالة نجاح
+                    showNotification('تم تحديث الصورة الشخصية بنجاح!', 'success');
+                };
+                
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+
+        // تحميل الصورة المحفوظة
+        window.addEventListener('load', () => {
+            createStars();
+            
+            const savedImage = localStorage.getItem('profileImage');
+            if (savedImage) {
+                profileImage.innerHTML = '';
+                const img = document.createElement('img');
+                img.src = savedImage;
+                img.style.width = '100%';
+                img.style.height = '100%';
+                img.style.objectFit = 'cover';
+                img.style.borderRadius = '50%';
+                profileImage.appendChild(img);
+            }
+
+            // تفعيل أشرطة التقدم
+            const progressBars = document.querySelectorAll('.progress-fill');
+            progressBars.forEach(bar => {
+                const width = bar.getAttribute('data-width');
+                setTimeout(() => {
+                    bar.style.width = width + '%';
+                }, 300);
+            });
+
+            // إنشاء مخطط المهارات
+            createSkillsChart();
+        });
+
+        // إظهار الإشعارات
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.textContent = message;
+            notification.style.position = 'fixed';
+            notification.style.top = '20px';
+            notification.style.right = '20px';
+            notification.style.background = type === 'success' ? '#10B981' : '#EF4444';
+            notification.style.color = 'white';
+            notification.style.padding = '1rem 2rem';
+            notification.style.borderRadius = '10px';
+            notification.style.zIndex = '10000';
+            notification.style.boxShadow = '0 5px 15px rgba(0,0,0,0.3)';
+            notification.style.animation = 'slideInRight 0.5s ease-out';
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'slideInRight 0.5s ease-out reverse';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 500);
+            }, 3000);
+        }
+
+        // تأثيرات التمرير
+        const scrollElements = document.querySelectorAll('.scroll-animate');
+        
+        const elementInView = (el, dividend = 1) => {
+            const elementTop = el.getBoundingClientRect().top;
+            return (
+                elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
+            );
+        };
+        
+        const displayScrollElement = (element) => {
+            element.classList.add('visible');
+        };
+        
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el, 1.25)) {
+                    displayScrollElement(el);
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', () => {
+            handleScrollAnimation();
+            
+            // تحديث الروابط النشطة
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // التنقل السلس
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // إنشاء مخطط المهارات
+        function createSkillsChart() {
+            const ctx = document.createElement('canvas');
+            ctx.id = 'skillsChart';
+            ctx.style.width = '100%';
+            ctx.style.height = '400px';
+            
+            const skillsSection = document.querySelector('#skills');
+            const chartContainer = document.createElement('div');
+            chartContainer.style.background = 'rgba(30, 41, 59, 0.8)';
+            chartContainer.style.padding = '2rem';
+            chartContainer.style.borderRadius = '20px';
+            chartContainer.style.marginTop = '3rem';
+            chartContainer.style.border = '1px solid rgba(59, 130, 246, 0.3)';
+            chartContainer.appendChild(ctx);
+            skillsSection.appendChild(chartContainer);
+            
+            const chart = new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: [
+                        'لغات البرمجة',
+                        'الذكاء الاصطناعي',
+                        'علم البيانات',
+                        'قواعد البيانات',
+                        'تطوير الويب',
+                        'تقنية المعلومات'
+                    ],
+                    datasets: [{
+                        label: 'مستوى المهارة',
+                        data: [95, 88, 92, 94, 90, 85],
+                        backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                        borderColor: 'rgba(59, 130, 246, 1)',
+                        pointBackgroundColor: 'rgba(59, 130, 246, 1)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgba(59, 130, 246, 1)',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        r: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                stepSize: 20
+                            },
+                            pointLabels: {
+                                font: {
+                                    size: 14,
+                                    family: 'Cairo'
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            labels: {
+                                font: {
+                                    size: 14,
+                                    family: 'Cairo'
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // تهيئة تأثيرات التمرير
+        handleScrollAnimation();
+    </script>
+</body>
+</html>
